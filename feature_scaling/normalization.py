@@ -1,8 +1,6 @@
 from locale import normalize
 import pandas as pd
 import numpy as np
-from pygments import highlight
-
 from sklearn import preprocessing
 
 NBA_FILE_PATH = 'feature_scaling/data/NBA_player_of_the_week.csv'
