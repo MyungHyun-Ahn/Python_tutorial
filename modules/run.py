@@ -1,7 +1,3 @@
-print('run 파일 이름 : {}'.format(__name__))
+import modules.shapes
 
-
-import area
-
-
-print('run 파일 실행됨')
+print(modules.shapes.area.circle(2))
