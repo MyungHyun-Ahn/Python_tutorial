@@ -1,0 +1,44 @@
+Git의 3가지 작업 영역
+
+1. working directory 
+>> working tree 라고도 함
+작업을 하는 프로젝트 디렉토리
+
+2. staging area
+>> index 라고도 함
+git add를 한 파일들이 존재하는 영역
+커밋을 하게되면 staging area에 있는 파일들만 커밋에 반영됨
+
+3. repository
+working directory의 변경 이력들이 저장되어 있는 영역
+즉, 커밋들이 저장되는 영역
+
+working directory > staging area > repository
+
+Git이 보는 파일의 4가지 상태
+
+Git에서 파일은 매 순간 4가지 상태 중 하나의 상태에 있게됨.
+
+● Untracked 상태
+추적되지 않고 있는 상태 >> 변동사항이 전혀 추적되고 있지 않는 상태
+ex) 파일을 생성하고 그 파일을 한번도 git add 해주지 않았다면 이 상태임.
+
+● Tracked 상태
+변동사항이 추적되고 있는 상태. 특성에 따라 3가지로 나뉨
+
+    ● Staged 상태
+    파일의 내용이 수정된 뒤 staging area에 올라와 있는 상태
+    ex1 : 새로 생성한 파일에 내용을 쓰고 git add를 한 상태
+    ex2 : 한번이라도 커밋에 포함됐었던 파일이라도 내용을 수정하고 git add를 해주면 이 상태
+
+    ● Unmodified 상태
+    파일이 최신 커밋의 모습과 비교했을 때 전혀 바뀐게 없는 상태
+    커밋 직후 working directory 안의 모든 파일들이 이 상태임
+
+    ● Modified 상태
+    최신 커밋과 비교했을 때 조금이라도 바뀐 내용이 있는 상태
+
+
+staging area에 파일 추가 >> git add
+
+staging area에서 파일 삭제 >> git reset
