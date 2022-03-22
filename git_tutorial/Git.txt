@@ -122,3 +122,47 @@ git log --pretty=oneline : 커밋해시 커밋메세지를 한줄로 보여줌.
 
 git show 커밋해시 4자리 : 바로 이전의 커밋과의 차이점을 보여줌.
 
+
+git alias
+
+긴 커맨드를 축약해서 사용가능함
+
+git log --pretty=oneline 은 너무 길어서 치기 힘들기 때문에
+git config alias.history 'log --pretty=oneline' 를 한번 실행시켜주면
+git history 로 줄여 사용할 수 있음
+
+커밋의 차이점 비교하기
+
+git diff 커밋해시1 커밋해시2
+
+HEAD의 의미 : 보통 가장 최근에 한 커밋을 가리킴
+
+이전 커밋으로 가기
+
+git reset --hard 커밋해시 4자리  : HEAD가 과거의 커밋을 가리키게 할 수 있음. 즉, 특정 시점으로 돌아감
+--hard 를 사용했기 때문에 working directory의 내부도 과거 커밋의 모습처럼 바뀜.
+
+git reset 옵션 eea5 | working directory | staging area     | repository 
+    --soft          |     안 바뀜       |    안 바뀜        | HEAD가 eea5 커밋 가리킴
+    --mixed         |     안 바뀜       | eea5 커밋처럼 바뀜 | HEAD가 eea5 커밋 가리킴
+    --hard          | eea5 커밋처럼 바뀜 | eea5 커밋처럼 바뀜 | HEAD가 eea5 커밋 가리킴
+
+hard 는 완전히 다 지워버리기 때문에 권장 X
+
+git log --pretty=oneline 했을때 위에서부터
+번호가 5 4 3 2 1 매겨짐
+
+git reset --hard HEAD~x 현재 HEAD가 가리키는 커밋보다 x단계 전에 있는 커밋을 나타냄
+
+커밋에 태그 달기 tag
+
+git tag [태그 이름] [커밋 해시] : 태그 달기
+
+git tag 태그 조회
+
+git show [태그 이름] : 태그가 달린 커밋 조회
+
+git tag -d [지울 태그명] : 태그 삭제
+
+
+
