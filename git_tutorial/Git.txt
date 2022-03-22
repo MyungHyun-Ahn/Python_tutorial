@@ -70,6 +70,24 @@ git commit -m "commit message"
 >>
 git push
 
+-m 옵션을 붙이지 않고 커밋하기
+
+git add . 후
+git commit 을 쓴뒤
+
+맨위에 메세지를 적고
+esc 후 :wq 를 적으면 자동으로 커밋이 되면서 커밋 메세지가 저장됨
+
+git commit 만으로 커밋을 남기면 복잡하고 긴 커밋 메세지를 남길수 있다.
+
+커밋 메세지를 수정하기
+
+최신 커밋을 수정하는 기능
+
+git add .
+git commit --amend  : 커밋 메세지를 수정 가능 파일 바꾸기도 가능
+
+
 리모트 레포지토리 >> 로컬 레포지토리 : 풀 pull
 
 git pull
@@ -81,3 +99,23 @@ git pull
 
 cd..
 git clone 깃허브링크 : 복사하다
+
+기본적으로 자신의 리모트 레포지토리에는 원래 자신만이 push 가능함.
+하지만 리모트 레포지토리의 주인이 다른 사용자를 collaborator로 설정해주면 그 사용자도 push가 가능함.
+
+git의 커밋을 다루는 방법
+
+커밋 히스토리 : 지금까지 한 커밋의 목록
+
+git log : 커밋 히스토리를 볼수 있음
+
+commit a2e32bf3530f79799def28d153f55fdca6d5e410 >> 커밋 아이디 / 커밋 해시
+Author: Myunghyun_Ahn <ahn020367@gmail.com>
+Date:   Tue Mar 22 15:13:22 2022 +0900
+
+커밋 히스토리 깔끔하게 보기
+
+git log --pretty=oneline : 커밋해시 커밋메세지를 한줄로 보여줌.
+
+git show 커밋해시 4자리 : 바로 이전의 커밋과의 차이점을 보여줌.
+
