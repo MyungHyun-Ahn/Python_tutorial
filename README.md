@@ -3,4 +3,4 @@
 # 2
 # Python_tutorial
 
-test 1234
+안녕안녕 / git fetch test
