@@ -17,6 +17,12 @@ git diff main origin/main : 비교하는 커맨드
 변경사항을 확인 후 적용하고 싶다면
 git merge origin/main
 
-git blame : 누가 코드를 작성했는지 알아내기위한 커맨드
+git blame 파일이름 : 누가 코드를 작성했는지 알아내기위한 커맨드 / 파일 변경 이력 확인
 blame : 비난하다, 탓하다
 git show 아이디4자리 : 변경이력 확인
+
+git revert 커밋해시4자리 : 해당 커밋 이전으로 되돌리기
+
+여러 커밋 취소하기
+
+git revert a(커밋해시)..b(커밋해시) : a 바로 다음 커밋부터 b 커밋까지 취소
