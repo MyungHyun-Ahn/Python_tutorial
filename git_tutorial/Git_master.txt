@@ -38,6 +38,3 @@ git cherry-pick 커밋해시 : 자신이 원하는 커밋만 가져와서 브랜
 
 --mixed
 --soft  // working directory의 상태를 건드리지 않는 옵션
-
-
-
