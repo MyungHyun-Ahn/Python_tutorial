@@ -1,0 +1,43 @@
+git reset --hard 커밋해시4자리
+reset을 한다고 이후의 커밋이 사라지는 것은 아님
+git reset 다시 이후 커밋으로 해주면 되돌아갈 수 있음.
+
+git reflog : HEAD가 가리켰던 로그 확인
+
+git log --pretty=oneline --all : 해당 브랜치와 다른 브랜치의 로그까지 전부 확인
+
+git log --pretty=oneline --all --graph : 브랜치들의 관계를 더 보기 쉽게 나타내줌
+
+git rebase 브랜치A : 현재 브랜치의 베이스를 브랜치A로 재지정한다는 뜻 
+
+git rebase --continue : conflict 가 발생해서 제대로 진행되지 못하는 rebase를 계속 진행하라는 뜻
+
+rebase나 merge나 결과물은 같음. 커밋 히스토리를 깔끔하게 만드려고 rebase를 사용함.
+
+임시저장
+
+git stash : working directory에서 작업하던 내용을 깃이 따로 보관 / 스택 자료구조
+git stash list : 스택에 쌓인 내용을 확인함
+git stash apply : 스택에 저장한 내용을 working directory로 가져와서 적용한다는 뜻
+
+잘못된 브랜치에서 작업했을때
+
+git stash 로 stack에 작업 내용을 저장한다.
+>> 올바른 브랜치로 가서 다시 git stash apply를 한다.
+
+git stash apply stash{a} : 스택의 a번 요소가 적용
+git stash drop stash{a} : 스택의 a번 요소를 삭제
+git stash pop stash{a} : 스택의 a번 요소를 적용하고 삭제
+
+필요한 커밋만 가져오기
+
+git cherry-pick 커밋해시 : 자신이 원하는 커밋만 가져와서 브랜치에 추가
+
+
+여러 커밋을 하나의 커밋으로 만들기
+
+--mixed
+--soft  // working directory의 상태를 건드리지 않는 옵션
+
+
+
