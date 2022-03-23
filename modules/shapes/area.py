@@ -1,4 +1,6 @@
-print('area 모듈 이름 : {}'.format(__name__))
+
+# import * 로 임포트했을 때 __all__ 에 있는 것만 가져오겠다는 의미
+__all__ = ['PI', 'circle']
 
 PI = 3.14
 

@@ -1,1 +1,2 @@
-from modules.shapes import area, volume
+# __all__ 은 모듈을 임포트 했을 때 어떤 것들을 가져와야 하는지 정해주는 변수
+__all__ = ['area']
