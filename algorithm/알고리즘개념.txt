@@ -63,3 +63,15 @@ Combine : 정렬된 두 리스트를 하나의 정렬된 리스트로 합병한�
 각각 비교하여 더 작은 인덱스로 배열
 
 
+퀵 정렬 Quicksort
+Divide 에서 대부분 일
+리스트를 나누는 과정을 Partition
+pivot을 정하고 pivot을 기준으로 정렬함
+
+왼쪽 오른쪽을 나누어서 정렬
+
+퀵정렬에서 가장 어려운 부분 Partition
+
+def partition(my_list, start, end)
+
+p = end
