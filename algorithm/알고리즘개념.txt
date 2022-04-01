@@ -75,3 +75,22 @@ pivot을 정하고 pivot을 기준으로 정렬함
 def partition(my_list, start, end)
 
 p = end
+
+Dynamic Programming의 조건
+
+최적 부분 구조 Optimal Substructure
+부분 문제들의 최적의 답을 이용해서 기존 문제의 최적의 답을 구할 수 있다는 것
+
+최단 경로 찾기
+
+중복되는 부분 문제 Overlapping Subproblems
+중복되는 부분 문제를 여러번 계산하는 것은 비효율
+
+최적 부분 구조가 있다 > 기존 문제를 부분 문제로 나눠 풀 수 있다. > 중복되는 부분 문제들이 있을 수 있다.
+>> 한 번 계산한 결과를 재활용하는 방식
+
+구현 방식
+
+1. Memoization
+중복되는 계산은 한번만 계산 후 메모
+딕셔너리를 만들어 놓고 기록
