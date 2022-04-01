@@ -91,6 +91,9 @@ Dynamic Programming의 조건
 
 구현 방식
 
-1. Memoization
+1. Memoization >> 재귀 기반
 중복되는 계산은 한번만 계산 후 메모
 딕셔너리를 만들어 놓고 기록
+
+2. Tabulation > table 방식으로 접근 >> 반복문 기반
+Bottom-up Approach 상향식 접근
