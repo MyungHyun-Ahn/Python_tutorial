@@ -1,3 +1,5 @@
-import modules.shapes
+from modules.shapes.area import *
 
-print(modules.shapes.area.circle(2))
+print(dir())
+
+PI
