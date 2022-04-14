@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import csv
 
 ### 코드를 작성하세요 ###
 response = requests.get('https://workey.codeit.kr/orangebottle/index')
@@ -18,6 +19,10 @@ for tag in branch_tags:
     branch_info.append(phoneNum.get_text())
     branch_infos.append(branch_info)
 
+csv_file = open('data_crawling/오렌지_보틀.csv','w', newline="")
+csv_writer = csv.writer(csv_file)
 
-# 출력 코드
-print(branch_infos)
+csv_writer.writerow(['지점 이름', '주소', '전화번호'])
+csv_writer.writerows(branch_infos)
+
+csv_file.close()
