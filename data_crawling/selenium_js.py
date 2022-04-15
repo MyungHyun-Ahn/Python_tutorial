@@ -1,6 +1,6 @@
 import time
 from selenium import webdriver
-from openpyxl import Workbook, workbook
+from openpyxl import Workbook
 
 wb = Workbook(write_only=True)
 
