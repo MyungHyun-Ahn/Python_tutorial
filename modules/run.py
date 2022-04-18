@@ -1,5 +1,5 @@
-from modules.shapes.area import *
+from shapes.area import *
 
-print(dir())
+print(circle(5))
 
 PI
